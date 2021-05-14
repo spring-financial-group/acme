@@ -36,6 +36,8 @@ spec:
             source /workspace/source/.jx/variables.sh
             cd charts/acme
             make release
+            cd ../../charts/acme-extra-certificates
+            make release
   podTemplate: {}
   serviceAccountName: tekton-bot
   timeout: 240h0m0s

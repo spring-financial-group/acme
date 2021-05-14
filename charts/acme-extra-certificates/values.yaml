@@ -1,0 +1,20 @@
+jxRequirements:
+  cluster:
+    projectID: ""
+    provider: ""
+    region: ""
+  ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: -jx.
+    tls:
+      email: ""
+      enabled: true
+      production: true
+      secretName: ""
+
+secretName: ""
+
+issuer:
+  enabled: false
+  cluster: false

@@ -18,6 +18,12 @@ spec:
         dnsNames:
         - "*.{{ .Values.jxRequirements.ingress.domain }}"
         - "{{ .Values.jxRequirements.ingress.domain }}"
+        {{- if hasKey .Values.jxRequirements.ingress "extraDomains" }}
+        {{- range .Values.jxRequirements.ingress.extraDomains }}
+        - "*.{{ . }}"
+        - "{{ . }}"
+        {{- end }}
+        {{- end }}
       # ACME DNS-01 provider configurations
       dns01:
 {{- if eq .Values.jxRequirements.cluster.provider "gke" }}

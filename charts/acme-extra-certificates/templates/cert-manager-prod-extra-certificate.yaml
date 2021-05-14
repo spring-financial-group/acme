@@ -1,0 +1,28 @@
+{{- $issuerEnabled := .Values.issuer.cluster }}
+{{- if .Values.jxRequirements.ingress.tls.enabled }}
+{{- if .Values.jxRequirements.ingress.tls.production }}
+{{- if hasKey .Values.jxRequirements.ingress "extraDomains" }}
+{{- range .Values.jxRequirements.ingress.extraDomains }}
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: "tls-{{ . | replace "." "-" }}-p"
+  labels:
+    jenkins.io/letsencrypt-service: production
+spec:
+  secretName: "tls-{{ . | replace "." "-" }}-p"
+  issuerRef:
+    name: letsencrypt-prod
+{{- if $issuerEnabled }}
+    kind: ClusterIssuer
+{{- end }}
+commonName: "*.{{ . }}"
+dnsNames:
+  - "*.{{ . }}"
+  - "{{ . }}"
+
+---
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
