@@ -1,5 +1,5 @@
 extraDomains:
-  - domain: "foo.bar"
+  - domain: "test.domain"
     externalDNS: false
     namespaceSubDomain: -jx.
     tls:
@@ -7,7 +7,7 @@ extraDomains:
       enabled: true
       production: true
       secretName: ""
-  - domain: "bar.foo"
+  - domain: "test.domain2"
     externalDNS: false
     namespaceSubDomain: -jx.
     tls:
@@ -21,3 +21,11 @@ secretName: ""
 issuer:
   enabled: true
   cluster: true
+
+
+
+jxRequirements:
+  cluster:
+    projectID: ""
+    provider: ""
+    region: ""
