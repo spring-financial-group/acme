@@ -22,10 +22,17 @@ issuer:
   enabled: true
   cluster: true
 
-
-
 jxRequirements:
   cluster:
     projectID: ""
     provider: ""
     region: ""
+  ingress:
+    domain: "domain.com"
+    externalDNS: false
+    namespaceSubDomain: -jx.
+    tls:
+      email: ""
+      enabled: true
+      production: true
+      secretName: ""
