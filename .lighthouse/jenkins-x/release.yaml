@@ -36,7 +36,11 @@ spec:
             source /workspace/source/.jx/variables.sh
             cd charts/acme
             make release
-            cd ../../charts/acme-extra-certificates
+            cd ../../charts/acme-certificates
+            make release
+            cd ../../charts/acme-nonereqs
+            make release
+            cd ../../charts/acme-certificates-nonereqs
             make release
   podTemplate: {}
   serviceAccountName: tekton-bot

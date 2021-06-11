@@ -1,5 +1,5 @@
 CHART_REPO := gs://jenkinsxio/charts
-NAME := acme-certificates
+NAME := acme-nonereqs
 build: clean
 	helm lint
 
