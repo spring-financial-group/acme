@@ -15,10 +15,10 @@ spec:
   issuerRef:
     name: letsencrypt-prod-extra
 {{- if $clusterIssuerEnabled }}
-kind: ClusterIssuer
+    kind: ClusterIssuer
 {{- end }}
-commonName: "*.{{ $val.domain }}"
-dnsNames:
+  commonName: "*.{{ $val.domain }}"
+  dnsNames:
   - "*.{{ $val.domain }}"
   - "{{ $val.domain }}"
 
