@@ -18,10 +18,10 @@ spec:
   issuerRef:
     name: letsencrypt-prod
 {{- if $clusterIssuerEnabled }}
-kind: ClusterIssuer
+    kind: ClusterIssuer
 {{- end }}
-commonName: "*.{{ $val.ingress.domain }}"
-dnsNames:
+  commonName: "*.{{ $val.ingress.domain }}"
+  dnsNames:
   - "*.{{ $val.ingress.domain }}"
   - "{{ $val.ingress.domain }}"
 
