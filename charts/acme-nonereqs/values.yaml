@@ -1,7 +1,7 @@
 extraDomains:
   - domain: "test.domain"
     externalDNS: false
-    namespaceSubDomain: -jx.
+    namespaceSubDomain: ""
     tls:
       email: ""
       enabled: true
@@ -9,7 +9,7 @@ extraDomains:
       secretName: ""
   - domain: "test.domain2"
     externalDNS: false
-    namespaceSubDomain: -jx.
+    namespaceSubDomain: ""
     tls:
       email: ""
       enabled: true

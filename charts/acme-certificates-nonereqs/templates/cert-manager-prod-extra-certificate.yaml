@@ -13,7 +13,7 @@ metadata:
 spec:
   secretName: "tls-{{ $val.domain | replace "." "-" }}-p"
   issuerRef:
-    name: letsencrypt-prod-extra
+    name: letsencrypt-{{ $val.domain | replace "." "-" }}-prod-extra
 {{- if $clusterIssuerEnabled }}
     kind: ClusterIssuer
 {{- end }}
