@@ -14,7 +14,7 @@ metadata:
   name: letsencrypt-{{ $val.domain | replace "." "-" }}-prod-extra
 spec:
   acme:
-    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    server: https://acme-v02.api.letsencrypt.org/directory
     email: "{{ $val.tls.email }}"
     # Name of a secret used to store the ACME account private key
     privateKeySecretRef:
