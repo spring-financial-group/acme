@@ -47,6 +47,8 @@ spec:
           subscriptionID: {{ .Values.jxRequirements.cluster.azure.dns.subscriptionId }}
           resourceGroupName: {{ .Values.jxRequirements.cluster.azure.dns.resourceGroup }}
           hostedZoneName: {{ .Values.jxRequirements.ingress.domain }}
+          managedIdentity:
+            clientID: {{ .Values.jxRequirements.cluster.azure.clusterNodes.clientID }}
 {{- end }}
 {{- end }}
 {{- end }}
