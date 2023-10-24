@@ -47,7 +47,7 @@ spec:
           resourceGroupName: {{ $azure.dns.resourceGroup }}
           hostedZoneName: {{ $val.domain }}
           managedIdentity:
-            clientID: {{ .Values.jxRequirements.cluster.azure.clusterNodes.clientID }}
+            clientID: {{ $azure.clusterNodes.clientID }}
 {{- end }}
 ---
 {{- end }}
