@@ -21,8 +21,7 @@ spec:
       name: letsencrypt-{{ $val.domain | replace "." "-" }}-staging-extra
     solvers:
     - selector:
-        dnsNames:
-        - "*.{{ $val.domain }}"
+        dnsZones:
         - "{{ $val.domain }}"
         # ACME DNS-01 provider configurations
       dns01:
