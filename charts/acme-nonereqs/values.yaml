@@ -1,20 +1,4 @@
-extraDomains:
-  - domain: "test.domain"
-    externalDNS: false
-    namespaceSubDomain: ""
-    tls:
-      email: ""
-      enabled: true
-      production: true
-      secretName: ""
-  - domain: "test.domain2"
-    externalDNS: false
-    namespaceSubDomain: ""
-    tls:
-      email: ""
-      enabled: true
-      production: false
-      secretName: ""
+extraDomains: []
 
 secretName: ""
 

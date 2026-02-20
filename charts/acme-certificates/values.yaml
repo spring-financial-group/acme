@@ -12,23 +12,7 @@ jxRequirements:
       enabled: true
       production: true
       secretName: ""
-  extraDomains:
-    - domain: "foo.bar"
-      externalDNS: false
-      namespaceSubDomain: -jx.
-      tls:
-        email: ""
-        enabled: true
-        production: true
-        secretName: ""
-    - domain: "bar.foo"
-      externalDNS: false
-      namespaceSubDomain: -jx.
-      tls:
-        email: ""
-        enabled: true
-        production: false
-        secretName: ""
+  extraDomains: []
 
 secretName: ""
 
